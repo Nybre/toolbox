@@ -588,7 +588,23 @@ performance_rating <- function(input, output, session, pool) {
    })
    
    text_9 = reactive({
+        #gender pronouns
      
+     if(gender()=="Male"){
+       pronoun_1 = "he"
+     }else{
+       pronoun_1 = "she"
+     }
+     if(gender()=="Male"){
+       pronoun_2 = "his"
+     }else{
+       pronoun_2 = "her"
+     }
+     if(gender()=="Male"){
+       pronoun_3 = "himself"
+     }else{
+       pronoun_3 = "herself"
+     }
      if(implementor()=="Envision"){
        implementor_out = paste("Finally,",pronoun_1," will handle space and tangibles by ",strong("Envisioning;")," this
        means ",pronoun_1," will create virtual presentations, sketch ideas and capture the essence of things.")
